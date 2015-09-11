@@ -70,3 +70,47 @@
     Ctrl + H                  替换
 
 ----------------------------------------------------------------------
+## 常用配置项
+
+```javascript
+{
+    // Encoding used when saving new files, and files opened with an undefined
+    // encoding (e.g., plain ascii files). If a file is opened with a specific
+    // encoding (either detected or given explicitly), this setting will be
+    // ignored, and the file will be saved with the encoding it was opened
+    // with.
+    "default_encoding": "UTF-8",
+
+    // Determines what character(s) are used to terminate each line in new files.
+    // Valid values are 'system' (whatever the OS uses), 'windows' (CRLF) and
+    // 'unix' (LF only).
+    "default_line_ending": "unix",
+
+    // Note that the font_face and font_size are overridden in the platform
+    // specific settings file, for example, "Preferences (Linux).sublime-settings".
+    // Because of this, setting them here will have no effect: you must set them
+    // in your User File Preferences.
+    "font_size": 10,
+
+    // Columns in which to display vertical rulers
+    "rulers": [80],
+
+
+    // The number of spaces a tab is considered equal to
+    "tab_size": 2,
+
+    // Set to true to insert spaces when tab is pressed
+    "translate_tabs_to_spaces": true,
+
+    // Disables horizontal scrolling if enabled.
+    // May be set to true, false, or "auto", where it will be disabled for
+    // source code, and otherwise enabled.
+    "word_wrap": "false",
+}
+[
+  { "keys": ["alt+shift+f"], "command": "reindent" }
+]
+```
+
+
+----------------------------------------------------------------------
