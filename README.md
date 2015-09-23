@@ -124,7 +124,8 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 
     `Shift+Ctrl+P` 查看可用选项
 
-    深入了解: <http://www.open-open.com/lib/view/open1429952232604.html>
+    深入了解: 
+    <a href="http://www.cnblogs.com/IPrograming/p/Sublime-markdown-editor.html" target="_blank">http://www.cnblogs.com/IPrograming/p/Sublime-markdown-editor.html</a>
 
 
 # 中文输入 
