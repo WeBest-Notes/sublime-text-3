@@ -111,3 +111,7 @@ Sublime Text 3 常用快捷键
 ```
 import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
 ```
+# 中文输入 
+解决Ubuntu下Sublime Text 3无法输入中文：
+
+<a href="https://github.com/i5ting" target="_blank">i5ting</a>
