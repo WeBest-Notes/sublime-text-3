@@ -115,9 +115,11 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 常用插件：
 
 -   Markdown Editing
+    
     提供了Markdown格式的高亮显示
 
 -   Markdown Preview
+    
     预览生成HTML的效果
 
     `Shift+Ctrl+P` 查看可用选项
