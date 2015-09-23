@@ -114,4 +114,4 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 # 中文输入 
 解决Ubuntu下Sublime Text 3无法输入中文：
 
-<a href=">http://www.jianshu.com/p/bf05fb3a4709" target="_blank">http://www.jianshu.com/p/bf05fb3a4709</a>
+<a href="http://www.jianshu.com/p/bf05fb3a4709" target="_blank">http://www.jianshu.com/p/bf05fb3a4709</a>
