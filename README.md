@@ -1,6 +1,8 @@
 Sublime Text 3 常用快捷键 
 
-# 常规
+# 基础
+
+## 常规
 
     F6                        检测语法错误
     F11                       全屏模式
@@ -8,7 +10,7 @@ Sublime Text 3 常用快捷键
     Esc                       退出光标多行选择，退出搜索框，命令框等。
     Ctrl + Shift + P          打开命令面板
 
-# 移动
+## 移动
 
     Alt + 数字                切换打开第N个文件
 
@@ -27,7 +29,7 @@ Sublime Text 3 常用快捷键
     F2                        下一个书签
     Shift + F2                上一个书签
 
-# 选择
+## 选择
 
     Ctrl + D                  选词
     Alt  + F3                 选择所有相同的词
@@ -35,21 +37,21 @@ Sublime Text 3 常用快捷键
     Ctrl + L                  选择整行（按住-继续选择下行）
     Ctrl + Shift + L          选中多行，按下快捷键，即可同时编辑这些行
 
-# 操作
+# 常用操作
 
-## 增：
+## 增加
 
     Ctrl + Enter              下方插入新行
     Ctrl + Shift + Enter      上方插入新行
     Ctrl + Shift + D          复制光标所在整行，插入在该行之前
 
-## 删：
+## 删除
 
     Ctrl + KK                 删除到行尾
     Ctrl + Shift + K          删除整行
     Ctrl + X                  删除当前行
 
-## 改：
+## 修改
 
     Ctrl + J                  合并行
     Ctrl + K + U              改为大写
@@ -59,13 +61,15 @@ Sublime Text 3 常用快捷键
     Ctrl + Shift + ↑          可以移动此行代码，与上行互换
     Ctrl + Shift + ↓          可以移动此行代码，与下行互换
 
-## 查：
+## 查询
 
     Ctrl + F                  搜索内容
     ctrl + shift + F          在文件夹内查找
     Ctrl + H                  替换
 
 # 配置项
+
+## 编辑器配置
 
 ```javascript
 {
@@ -102,33 +106,108 @@ Sublime Text 3 常用快捷键
     // source code, and otherwise enabled.
     "word_wrap": "false",
 }
+```
+
+## 快捷键配置
+
+```javascript
 [
   { "keys": ["alt+shift+f"], "command": "reindent" }
 ]
 ```
-# 安装 Package Control
+
+# 常见问题
+
+## Ubuntu下无法输入中文 
+
+<a href="http://www.jianshu.com/p/bf05fb3a4709" target="_blank">http://www.jianshu.com/p/bf05fb3a4709</a>
+
+# 插件
+
+## Package Control
 
 ```
 import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
 ```
 
-常用插件：
+## Vintage
 
--   Markdown Editing
+-   简介
+
+    支持 vi 编辑器的操作
+
+## Markdown Editing
     
+-   简介
+
     提供了Markdown格式的高亮显示
 
--   Markdown Preview
+## Markdown Preview
+    
+-   功能
     
     预览生成HTML的效果
 
+-   简介
+
     `Shift+Ctrl+P` 查看可用选项
 
-    深入了解: 
+-   深入了解: 
+
     <a href="http://www.cnblogs.com/IPrograming/p/Sublime-markdown-editor.html" target="_blank">http://www.cnblogs.com/IPrograming/p/Sublime-markdown-editor.html</a>
 
+## Alignment
 
-# 中文输入 
-解决Ubuntu下Sublime Text 3无法输入中文：
+-   功能：”=”号对齐
 
-<a href="http://www.jianshu.com/p/bf05fb3a4709" target="_blank">http://www.jianshu.com/p/bf05fb3a4709</a>
+-   简介：变量定义太多，长短不一，可一键对齐
+
+-   使用：默认快捷键Ctrl+Alt+A和QQ截屏冲突，可设置其他快捷键如：Ctrl+Shift+Alt+A；先选择要对齐的文本
+
+## Doc​Blockr
+
+-   功能：生成优美注释
+
+-   简介：标准的注释，包括函数名、参数、返回值等，并以多行显示，手动写比较麻烦
+
+-   使用：输入/*、/**然后回车，还有很多用法，请参照
+
+-   <https://sublime.wbond.net/packages/DocBlockr>
+
+## IMESupport
+
+-   功能：sublime中文输入法
+
+-   简介：还在纠结 Sublime Text 中文输入法不能跟随光标吗？试试「IMESupport 」这个插件吧！目前只支持 Windows，在搜索等界面不能很好的跟随光标。
+
+-   使用：Ctrl + Shift + P →输入pci →输入IMESupport →回车
+
+## AutoFileName
+
+-   功能：快捷输入文件名
+
+-   简介：自动完成文件名的输入，如图片选取
+
+-   使用：输入”/”即可看到相对于本项目文件夹的其他文件
+
+
+## Clipboard History
+
+-   功能：粘贴板历史记录
+
+-   简介：方便使用复制/剪切的内容
+
+-   使用：
+
+    Ctrl+alt+v：显示历史记录
+    Ctrl+alt+d：清空历史记录
+    Ctrl+shift+v：粘贴上一条记录（最旧）
+    Ctrl+shift+alt+v：粘贴下一条记录（最新）
+
+## Bracket Highlighter
+
+-   功能：类似于代码匹配，可以匹配括号，引号等符号内的范围。
+
+## Zen Coding
+
+-   功能： 《Zen Coding: 一种快速编写HTML/CSS代码的方法》。
