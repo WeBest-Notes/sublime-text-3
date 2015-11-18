@@ -176,6 +176,16 @@ open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.
 
     <https://github.com/sokolovstas/SublimeWebInspector>
 
+## sublime_debugger
+
+-   简介
+
+    调试工具
+
+-   官网
+
+    <https://github.com/shuky19/sublime_debugger>
+
 ## Emmet
 
 -   简介
