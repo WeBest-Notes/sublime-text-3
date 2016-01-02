@@ -1,0 +1,546 @@
+<html>
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:sublime-text-3</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
+
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
+
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
+
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
+
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
+
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<h1 id="-">基础</h1>
+<h2 id="-">常规</h2>
+<pre><code>F6                        检测语法错误
+F11                       全屏模式
+Shift + F11               全屏免打扰模式，只编辑当前文件
+Esc                       退出光标多行选择，退出搜索框，命令框等。
+Ctrl + Shift + P          打开命令面板
+</code></pre><h2 id="-">移动</h2>
+<pre><code>Alt + 数字                切换打开第N个文件
+
+Ctrl + G                  ：跳转到相应的行
+Ctrl + R                  @ 快速列出/跳转到某个函数
+Ctrl + ;                  # 查找变量名
+Ctrl + P                  查找当前项目中的文件和快速搜索；
+                          输入 @ 查找文件主标题/函数
+                          输入 # 查找变量名
+                          输入 : 跳转到文件某行
+
+Ctrl + ←                  向左单位性地移动光标，快速移动光标。
+Ctrl + →                  向右单位性地移动光标，快速移动光标。
+
+Ctrl + F2                 设置/取消书签
+F2                        下一个书签
+Shift + F2                上一个书签
+</code></pre><h2 id="-">选择</h2>
+<pre><code>Ctrl + D                  选词
+Alt  + F3                 选择所有相同的词
+Ctrl + Shift + M          选择括号内的内容
+Ctrl + L                  选择整行（按住-继续选择下行）
+Ctrl + Shift + L          选中多行，按下快捷键，即可同时编辑这些行
+</code></pre><h1 id="-">常用操作</h1>
+<h2 id="-">增加</h2>
+<pre><code>Ctrl + Enter              下方插入新行
+Ctrl + Shift + Enter      上方插入新行
+Ctrl + Shift + D          复制光标所在整行，插入在该行之前
+</code></pre><h2 id="-">删除</h2>
+<pre><code>Ctrl + KK                 删除到行尾
+Ctrl + Shift + K          删除整行
+Ctrl + X                  删除当前行
+</code></pre><h2 id="-">修改</h2>
+<pre><code>Ctrl + J                  合并行
+Ctrl + K + U              改为大写
+Ctrl + K + L              改为小写
+Ctrl + /                  注释当前行
+Ctrl + Shift + /          注释已选择内容
+Ctrl + Shift + ↑          可以移动此行代码，与上行互换
+Ctrl + Shift + ↓          可以移动此行代码，与下行互换
+</code></pre><h2 id="-">查询</h2>
+<pre><code>Ctrl + F                  搜索内容
+ctrl + shift + F          在文件夹内查找
+Ctrl + H                  替换
+</code></pre><h1 id="-">配置项</h1>
+<h2 id="-">编辑器配置</h2>
+<pre><code class="lang-javascript">{
+    // Encoding used when saving new files, and files opened with an undefined
+    // encoding (e.g., plain ascii files). If a file is opened with a specific
+    // encoding (either detected or given explicitly), this setting will be
+    // ignored, and the file will be saved with the encoding it was opened
+    // with.
+    &quot;default_encoding&quot;: &quot;UTF-8&quot;,
+
+    // Determines what character(s) are used to terminate each line in new files.
+    // Valid values are &#39;system&#39; (whatever the OS uses), &#39;windows&#39; (CRLF) and
+    // &#39;unix&#39; (LF only).
+    &quot;default_line_ending&quot;: &quot;unix&quot;,
+
+    // Note that the font_face and font_size are overridden in the platform
+    // specific settings file, for example, &quot;Preferences (Linux).sublime-settings&quot;.
+    // Because of this, setting them here will have no effect: you must set them
+    // in your User File Preferences.
+    &quot;font_size&quot;: 10,
+
+    // Columns in which to display vertical rulers
+    &quot;rulers&quot;: [80],
+
+
+    // The number of spaces a tab is considered equal to
+    &quot;tab_size&quot;: 2,
+
+    // Set to true to insert spaces when tab is pressed
+    &quot;translate_tabs_to_spaces&quot;: true,
+
+    // Disables horizontal scrolling if enabled.
+    // May be set to true, false, or &quot;auto&quot;, where it will be disabled for
+    // source code, and otherwise enabled.
+    &quot;word_wrap&quot;: &quot;false&quot;,
+}
+</code></pre>
+<h2 id="-">快捷键配置</h2>
+<pre><code class="lang-javascript">[
+  { &quot;keys&quot;: [&quot;alt+shift+f&quot;], &quot;command&quot;: &quot;reindent&quot; }
+]
+</code></pre>
+<h1 id="-">常见问题</h1>
+<h2 id="-">注册码</h2>
+<pre><code>—– BEGIN LICENSE —–
+Andrew Weber
+Single User License
+EA7E-855605
+813A03DD 5E4AD9E6 6C0EEB94 BC99798F
+942194A6 02396E98 E62C9979 4BB979FE
+91424C9D A45400BF F6747D88 2FB88078
+90F5CC94 1CDC92DC 8457107A F151657B
+1D22E383 A997F016 42397640 33F41CFC
+E1D0AE85 A0BBD039 0E9C8D55 E1B89D5D
+5CDB7036 E56DE1C0 EFCC0840 650CD3A6
+B98FC99C 8FAC73EE D2B95564 DF450523
+—— END LICENSE ——
+</code></pre><h2 id="-console">调出 console</h2>
+<pre><code>Ctrl + `
+</code></pre><h2 id="-package-control">安装 Package Control</h2>
+<p>详细： <a href="https://packagecontrol.io/installation">https://packagecontrol.io/installation</a></p>
+<pre><code>import urllib.request,os; pf = &#39;Package Control.sublime-package&#39;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), &#39;wb&#39;).write(urllib.request.urlopen( &#39;http://sublime.wbond.net/&#39; + pf.replace(&#39; &#39;,&#39;%20&#39;)).read())
+</code></pre><h2 id="ubuntu-">Ubuntu下无法输入中文</h2>
+<ol>
+<li><p>安装搜狗输入法</p>
+</li>
+<li><p>下载需要的文件</p>
+<pre><code>git clone https://github.com/lyfeyaj/sublime-text-imfix.git
+</code></pre></li>
+<li><p>将 subl 移动到/usr/bin/，将 sublime-imfix.so 移动到/opt/sublime_text/</p>
+<pre><code>cd ~/sublime-text-imfix
+sudo cp ./lib/libsublime-imfix.so /opt/sublime_text/
+sudo cp ./src/subl /usr/bin/
+</code></pre></li>
+<li><p>用 subl 命令启动sublime</p>
+</li>
+<li><p>详细</p>
+<p><a href="http://www.jianshu.com/p/bf05fb3a4709">http://www.jianshu.com/p/bf05fb3a4709</a></p>
+</li>
+</ol>
+<h1 id="-">插件</h1>
+<h2 id="-">参考资料</h2>
+<ul>
+<li><p><a href="http://www.uis.cc/content-9-344-1.html">Sublime Text 最佳插件列表</a></p>
+</li>
+<li><p><a href="http://www.qianduan.net/essential-to-sublime-the-text-2-plugins/">一些必不可少的Sublime Text 2插件</a></p>
+</li>
+</ul>
+<h2 id="webinspector">WebInspector</h2>
+<ul>
+<li><p>简介</p>
+<p>在 JavaScript调试方面，这是一个令人惊讶的工具</p>
+</li>
+<li><p>官方</p>
+<p><a href="https://github.com/sokolovstas/SublimeWebInspector">https://github.com/sokolovstas/SublimeWebInspector</a></p>
+</li>
+</ul>
+<h2 id="sublime_debugger">sublime_debugger</h2>
+<ul>
+<li><p>简介</p>
+<p>调试工具</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/shuky19/sublime_debugger">https://github.com/shuky19/sublime_debugger</a></p>
+</li>
+</ul>
+<h2 id="emmet">Emmet</h2>
+<ul>
+<li><p>简介</p>
+<p>快速编写 HTML/CSS 的编辑器中最流行的插件之一</p>
+</li>
+<li><p>官网</p>
+<p><a href="http://ipestov.com/the-best-plugins-for-sublime-text/">http://ipestov.com/the-best-plugins-for-sublime-text/</a></p>
+</li>
+</ul>
+<h2 id="zen-coding">Zen Coding</h2>
+<ul>
+<li><p>简介</p>
+<p>Emmet 的前身</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://bitbucket.org/sublimator/sublime-2-zencoding">https://bitbucket.org/sublimator/sublime-2-zencoding</a></p>
+</li>
+<li><p>详细</p>
+<p><a href="http://www.qianduan.net/zen-coding-a-new-way-to-write-html-code">《Zen Coding: 一种快速编写HTML/CSS代码的方法》</a></p>
+</li>
+</ul>
+<h2 id="git">Git</h2>
+<ul>
+<li><p>简介</p>
+<p>使用编辑器直接和Git协同工作</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/kemayo/sublime-text-git">https://github.com/kemayo/sublime-text-git</a></p>
+</li>
+</ul>
+<h2 id="glue">Glue</h2>
+<ul>
+<li><p>简介</p>
+<p>会在界面下方显示一个小窗口，你可以在那里写Shell脚本。</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/chrissimpkins/glue">https://github.com/chrissimpkins/glue</a></p>
+</li>
+</ul>
+<h2 id="gitgutter-modific">GitGutter &amp; Modific</h2>
+<ul>
+<li><p>简介</p>
+<p>这些插件可以高亮相对于上次提交有所变动的行，换句话说是实时的diff工具。</p>
+</li>
+<li><p>简介</p>
+<p><a href="https://github.com/jisaacks/GitGutter">https://github.com/jisaacks/GitGutter</a></p>
+<p><a href="https://github.com/gornostal/Modific">https://github.com/gornostal/Modific</a></p>
+</li>
+</ul>
+<h2 id="brackethighlighter">BracketHighlighter</h2>
+<ul>
+<li><p>简介</p>
+<p>打开/折叠代码，高亮匹配</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://sublime.wbond.net/packages/BracketHighlighter">https://sublime.wbond.net/packages/BracketHighlighter</a></p>
+</li>
+</ul>
+<h2 id="autofilename">AutoFileName</h2>
+<ul>
+<li><p>简介</p>
+<p>自动补全文件路径</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/BoundInCode/AutoFileName">https://github.com/BoundInCode/AutoFileName</a></p>
+</li>
+</ul>
+<h2 id="allautocomplete">AllAutocomplete</h2>
+<ul>
+<li><p>简介</p>
+<p>基于已打开的文件补全代码</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/alienhard/SublimeAllAutocomplete">https://github.com/alienhard/SublimeAllAutocomplete</a></p>
+</li>
+</ul>
+<h2 id="docblockr">DocBlockr</h2>
+<ul>
+<li><p>简介</p>
+<p>编写代码注释的有效工具</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/spadgos/sublime-jsdocs">https://github.com/spadgos/sublime-jsdocs</a></p>
+</li>
+<li><p>详细</p>
+<p><a href="https://sublime.wbond.net/packages/DocBlockr">https://sublime.wbond.net/packages/DocBlockr</a></p>
+</li>
+</ul>
+<h2 id="colorpicker-guttercolor-colorhighlightergutter">ColorPicker &amp; GutterColor &amp; ColorHighlightergutter</h2>
+<ul>
+<li><p>简介</p>
+<p>调色盘，写 CSS 非常方便</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/weslly/ColorPicker">https://github.com/weslly/ColorPicker</a></p>
+<p><a href="https://github.com/ggordan/GutterColor">https://github.com/ggordan/GutterColor</a></p>
+<p><a href="https://github.com/Monnoroch/ColorHighlighter">https://github.com/Monnoroch/ColorHighlighter</a></p>
+</li>
+</ul>
+<h2 id="colorcoder">Colorcoder</h2>
+<ul>
+<li><p>简介</p>
+<p>高亮所有变量</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/vprimachenko/Sublime-Colorcoder">https://github.com/vprimachenko/Sublime-Colorcoder</a></p>
+</li>
+</ul>
+<h2 id="plaintasks">PlainTasks</h2>
+<ul>
+<li><p>简介</p>
+<p>杰出的待办事项表</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/aziz/PlainTasks">https://github.com/aziz/PlainTasks</a></p>
+</li>
+</ul>
+<h2 id="markdownediting">MarkdownEditing</h2>
+<ul>
+<li><p>简介</p>
+<p>提供了Markdown格式的高亮编辑显示</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/ttscoff/MarkdownEditing">https://github.com/ttscoff/MarkdownEditing</a></p>
+</li>
+</ul>
+<h2 id="markdownpreview">MarkdownPreview</h2>
+<ul>
+<li><p>简介</p>
+<p>预览生成HTML的效果</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/revolunet/sublimetext-markdown-preview">https://github.com/revolunet/sublimetext-markdown-preview</a></p>
+</li>
+<li><p>深入了解: </p>
+<p><a href="http://www.cnblogs.com/IPrograming/p/Sublime-markdown-editor.html">http://www.cnblogs.com/IPrograming/p/Sublime-markdown-editor.html</a></p>
+</li>
+</ul>
+<h2 id="vintage-actualvim">Vintage &amp; ActualVim</h2>
+<ul>
+<li><p>简介</p>
+<p>支持 vi 编辑器的操作</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/sublimehq/Vintage">https://github.com/sublimehq/Vintage</a></p>
+<p><a href="https://github.com/lunixbochs/actualvim">https://github.com/lunixbochs/actualvim</a></p>
+</li>
+</ul>
+<h2 id="inc-dec-value">Inc-Dec-Value</h2>
+<ul>
+<li><p>简介</p>
+<p>增加或减少数字, 日期, 十六进制彩色值等等</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/rmaksim/Sublime-Text-2-Inc-Dec-Value">https://github.com/rmaksim/Sublime-Text-2-Inc-Dec-Value</a></p>
+</li>
+</ul>
+<h2 id="alignment">Alignment</h2>
+<ul>
+<li><p>简介</p>
+<p>Package Control作者写的简单到极致的多行选择和多行选择对齐插件</p>
+<p>”=”号对齐, 变量定义太多，长短不一，可一键对齐</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/wbond/sublime_alignment">https://github.com/wbond/sublime_alignment</a></p>
+</li>
+<li><p>使用</p>
+<p>默认快捷键Ctrl+Alt+A和QQ截屏冲突，可设置其他快捷键如：Ctrl+Shift+Alt+A；先选择要对齐的文本</p>
+</li>
+</ul>
+<h2 id="sublimealignment">SublimeAlignment</h2>
+<ul>
+<li><p>简介</p>
+<p>用于代码格式的自动对齐</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/wbond/sublime_alignment">https://github.com/wbond/sublime_alignment</a></p>
+</li>
+</ul>
+<h2 id="clipboard-history">Clipboard History</h2>
+<ul>
+<li><p>简介</p>
+<p>粘贴板历史记录，方便使用复制/剪切的内容</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/kemayo/sublime-text-2-clipboard-history">https://github.com/kemayo/sublime-text-2-clipboard-history</a></p>
+</li>
+<li><p>使用：</p>
+<p>Ctrl+alt+v：显示历史记录</p>
+<p>Ctrl+alt+d：清空历史记录</p>
+<p>Ctrl+shift+v：粘贴上一条记录（最旧）</p>
+<p>Ctrl+shift+alt+v：粘贴下一条记录（最新）</p>
+</li>
+</ul>
+<h2 id="imesupport">IMESupport</h2>
+<ul>
+<li><p>简介</p>
+<p>sublime中文输入法</p>
+<p>还在纠结 Sublime Text 中文输入法不能跟随光标吗？试试「IMESupport 」这个插件吧！
+目前只支持 Windows，在搜索等界面不能很好的跟随光标。</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/chikatoike/IMESupport">https://github.com/chikatoike/IMESupport</a></p>
+</li>
+<li><p>使用</p>
+<p>Ctrl + Shift + P →输入pci →输入IMESupport →回车</p>
+</li>
+</ul>
+<h2 id="sublimelinter">SublimeLinter</h2>
+<ul>
+<li><p>简介</p>
+<p>一个支持lint语法的插件，可以高亮linter认为有错误的代码行</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/kronuz/SublimeLinter/">https://github.com/kronuz/SublimeLinter/</a></p>
+</li>
+</ul>
+<h2 id="nettuts-fetch">Nettuts-Fetch</h2>
+<ul>
+<li><p>简介</p>
+<p>可以自动更新一些开源库</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/weslly/Nettuts-Fetch">https://github.com/weslly/Nettuts-Fetch</a></p>
+</li>
+</ul>
+<h2 id="jsminifier">JsMinifier</h2>
+<ul>
+<li><p>简介</p>
+<p>该插件基于Google Closure compiler，自动压缩js文件。</p>
+</li>
+<li><p>官网</p>
+<p><a href="https://github.com/cgutierrez/JsMinifier">https://github.com/cgutierrez/JsMinifier</a></p>
+</li>
+</ul>
+<h2 id="converttoutf8">ConvertToUTF8</h2>
+<ul>
+<li><p>简介</p>
+<p>将文件编码从GBK转黄成UTF8，快捷键Ctrl+Shift+C</p>
+</li>
+<li><p>官网</p>
+<p><a href="http://www.sublimetext.com/forum/viewtopic.php?f=5&amp;p=22274">http://www.sublimetext.com/forum/viewtopic.php?f=5&amp;p=22274</a></p>
+</li>
+</ul>
+<h1 id="-">主题和配色方案</h1>
+<h2 id="-">参考资料</h2>
+<ul>
+<li><p><a href="https://github.com/daylerees/colour-schemes">主题</a></p>
+</li>
+<li><p><a href="http://colorsublime.com/">配色方案</a></p>
+</li>
+</ul>
+<h2 id="soda">Soda</h2>
+<ul>
+<li><p>官网</p>
+<p><a href="http://buymeasoda.github.io/soda-theme/">http://buymeasoda.github.io/soda-theme/</a></p>
+</li>
+</ul>
+<h2 id="spacegray">Spacegray</h2>
+<ul>
+<li><p>官网</p>
+<p><a href="http://kkga.github.io/spacegray/">http://kkga.github.io/spacegray/</a></p>
+</li>
+</ul>
+<h2 id="flatland">Flatland</h2>
+<ul>
+<li><p>官网</p>
+<p><a href="https://github.com/thinkpixellab/flatland">https://github.com/thinkpixellab/flatland</a></p>
+</li>
+</ul>
+<h2 id="tomorrow">Tomorrow</h2>
+<ul>
+<li><p>官网</p>
+<p><a href="https://github.com/chriskempson/tomorrow-theme">https://github.com/chriskempson/tomorrow-theme</a></p>
+</li>
+</ul>
+<h2 id="base-16">Base 16</h2>
+<ul>
+<li><p>官网</p>
+<p><a href="https://github.com/chriskempson/base16">https://github.com/chriskempson/base16</a></p>
+</li>
+</ul>
+<h2 id="solarized">Solarized</h2>
+<ul>
+<li><p>官网</p>
+<p><a href="http://ethanschoonover.com/solarized">http://ethanschoonover.com/solarized</a></p>
+</li>
+</ul>
+<h2 id="predawn">Predawn</h2>
+<ul>
+<li><p>官网</p>
+<p><a href="https://github.com/jamiewilson/predawn">https://github.com/jamiewilson/predawn</a></p>
+</li>
+</ul>
+<h2 id="itg-flat">itg.flat</h2>
+<ul>
+<li><p>官网</p>
+<p><a href="https://sublime.wbond.net/packages/Theme%20-%20itg.flat">https://sublime.wbond.net/packages/Theme%20-%20itg.flat</a></p>
+</li>
+</ul>
+
+          	</article>
+        </div>
+		</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>
